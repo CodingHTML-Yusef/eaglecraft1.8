@@ -1,0 +1,26 @@
+There is a common error that causes the game to not properly launch and gray out the "play" button. To fix this, delete your .minecraft folder.
+In order to know if you are affected by the error, a sample error is provided:
+
+------------------------------------------------------------------------------------------
+Job 'Version & Libraries' finished successfully
+Launching game
+Looking for old natives to clean up...
+Fatal error launching game. Report this to http://mojang.atlassian.net please!
+java.lang.NullPointerException
+    at net.minecraft.launcher.GameLauncher.cleanOldNatives(GameLauncher.java:515)
+    at net.minecraft.launcher.GameLauncher.launchGame(GameLauncher.java:360)
+    at net.minecraft.launcher.GameLauncher.onDownloadJobFinished(GameLauncher.java:693)
+    at net.minecraft.launcher.updater.download.DownloadJob.popAndDownload(DownloadJob.java:124)
+    at net.minecraft.launcher.updater.download.DownloadJob.access$000(DownloadJob.java:15)
+    at net.minecraft.launcher.updater.download.DownloadJob$1.run(DownloadJob.java:94)
+    at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+    at java.util.concurrent.FutureTask.run(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.
+------------------------------------------------------------------------------------------
+
+.minecraft/minecraft folder locations:
+
+Windows  =	%appdata%\.minecraft
+Linux    =	~/.minecraft
+Mac OS X =	~/Library/Application Support/minecraft
